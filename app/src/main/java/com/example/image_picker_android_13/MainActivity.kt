@@ -164,7 +164,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             extension = MimeTypeMap.getFileExtensionFromUrl(uri.toString())
             MimeTypeMap.getSingleton().getMimeTypeFromExtension(
-                extension.toLowerCase()
+                extension.lowercase(Locale.ROOT)
             )
         }
         return Pair(mimeType, extension)
